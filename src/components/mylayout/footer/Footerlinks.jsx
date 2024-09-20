@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footerlinks = () => {
+const Footerlinks = ({handleClick}) => {
     const images = [
         'Logo.png',
         'Group 7.png',
@@ -13,7 +13,7 @@ const Footerlinks = () => {
   return (
     <div className="image-container" style={styles.container}>
     {images.map((image, index) => (
-        <div className="footimg">
+        <div className="footimg" onClick={handleClick} key={index}>
         <img
             key={index}
             src={image}
@@ -33,8 +33,8 @@ const styles = {
         gap: '20px'
     },
     image: {
-        width: '26px', // Set your desired width
-        height: '26px' // Maintain aspect ratio
+        width: '24px', // Set your desired width
+        height: '24px' // Maintain aspect ratio
         
     }
 };
